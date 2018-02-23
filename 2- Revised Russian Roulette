@@ -1,0 +1,33 @@
+import sys
+
+def revisedRussianRoulette(doors):
+    x=len(doors)
+    doors_copy = list(doors)
+    minc=0
+    maxc=0
+
+    for b in range (0,x-1):
+        if doors[b]==1 and doors[b+1]==1:
+            doors[b]=0
+            doors[b+1]=0
+            minc+=1
+    for b in range (0,x):
+        if doors[b]==1:
+            doors[b]=0
+            minc+=1
+#max          
+    for b in range (0,x-1):
+        if doors_copy[b]==1 and doors_copy[b+1]==0:
+            doors_copy[b]=0
+            maxc+=1
+    for b in range (0,x):
+        if doors_copy[b]==1:
+            doors_copy[b]=0
+            maxc+=1
+    return minc, maxc   
+
+if __name__ == "__main__":
+    n = int(input().strip())
+    doors = list(map(int, input().strip().split(' ')))
+    result = revisedRussianRoulette(doors)
+print (" ".join(map(str, result)))
