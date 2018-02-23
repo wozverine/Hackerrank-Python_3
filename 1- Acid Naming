@@ -1,0 +1,40 @@
+import sys
+
+def acidNaming(acid_name):
+    char_list = list(acid_name)   
+    x=len(char_list)
+    if(x<5):
+        f=[None]*2
+        for v in range (0,2):
+            f[v]=char_list[x-v-1]    
+        str3=''.join(f)
+        
+        if str3=="ci":
+            return "polyatomic acid"  
+        else:
+            return "not an acid"
+    else:
+        b=[None]*5
+        c=[None]*2
+        for a in range (0,5):
+            b[a]=char_list[a]
+        str1=''.join(b)
+    
+        for d in range (0,2):
+            c[d]=char_list[x-d-1]    
+        str2=''.join(c)
+    
+        if str1=="hydro" and str2=="ci":
+            return "non-metal acid"
+        elif str2=="ci":
+            return "polyatomic acid"
+        else:    
+            return "not an acid"
+    
+
+if __name__ == "__main__":
+    n = int(input().strip())
+    for a0 in range(n):    
+        acid_name = input().strip()
+        result = acidNaming(acid_name)
+print(result)
