@@ -1,2 +1,2 @@
 # Hackerrank
-Hackerrank Solutions
+Hackerrank Python Intoduction Challenges Solutions
