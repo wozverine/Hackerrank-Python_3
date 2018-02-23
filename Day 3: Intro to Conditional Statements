@@ -1,0 +1,16 @@
+
+import sys
+
+def checker(a):
+    if a%2==1:
+        return "Weird"
+    elif a in range (2,6):
+        return "Not Weird"
+    elif a in range (6,21):
+        return "Weird"
+    else:
+        return "Not Weird"            
+
+N = int(input().strip())
+
+print(checker(N))
