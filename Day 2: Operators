@@ -1,0 +1,14 @@
+import sys
+def cost(x,y,z):
+    a=x*y/100
+    b=x*z/100
+    c=round(a+b+x,0)
+    r=int(c)
+    return r
+    
+if __name__ == "__main__":
+    meal_cost = float(input().strip())
+    tip_percent = int(input().strip())
+    tax_percent = int(input().strip())
+    r=cost(meal_cost,tip_percent,tax_percent)
+print ("The total meal cost is %d dollars." %(r) )

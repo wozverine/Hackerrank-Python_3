@@ -1,0 +1,11 @@
+if __name__ == "__main__":
+    leng=int(input())
+    for i in range (leng):
+        i1=list(input())
+        ilen=len(i1)
+        for a in range (0,ilen,2):
+            print(i1[a],end="")
+        print(" ",end="")
+        for a in range (1,ilen,2):
+            print(i1[a],end="")
+        print()    
