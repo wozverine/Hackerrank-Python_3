@@ -1,0 +1,19 @@
+def count_substring(string, sub_string):
+    checker=False
+    s1=list(string)
+    s2=list(sub_string)
+    sc=len(s1)
+    subc=len(sub_string)
+    count=0
+    for x in range (0,sc-subc+1):
+        if ord(s2[0])==ord(s1[x]):
+            for a in range (0,subc):
+                if ord(s2[a])==ord(s1[x+a]):
+                    checker=True
+                else:
+                    checker=False
+                    break
+        if checker==True:
+            count+=1
+        checker=False
+    return count
