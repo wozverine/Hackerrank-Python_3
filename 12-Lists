@@ -1,0 +1,26 @@
+def check(a,R):
+    if a=="pop":
+        R.pop()
+    if a=="print":
+        print(R)
+    if a=="reverse":
+        R.reverse()
+    if a=="sort":
+        R.sort()
+    return R
+    
+if __name__ == '__main__':
+    N = int(input())
+    A=[]
+    R=[]
+    for x in range (N):
+        A.append([])
+        A[x].extend(input().split())
+        y=A[x][0]
+        R=check(y,R)
+        if y=="insert":
+            R.insert(int(A[x][1]),int(A[x][2]))
+        if y=="remove":
+            R.remove(int(A[x][1]))
+        if y=="append":
+            R.append(int(A[x][1]))
