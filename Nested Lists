@@ -1,7 +1,6 @@
 if __name__ == '__main__':
     l=[]
     check=set()
-    mini=100
     x=[]
     for _ in range(int(input())):
         name = input()
