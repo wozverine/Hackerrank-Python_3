@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    l=[]
+    check=set()
+    x=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())  
+        l.append([name,score])
+        check.add(score)
+    mini=sorted(list(check))[1]   
+    x.extend(x[0] for x in l if mini in x)
+    print (*sorted(x),sep='\n')

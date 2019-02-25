@@ -1,0 +1,21 @@
+def ascii(d):
+    f=ord(d)    
+    if(f<91 and f>64):
+        f+=32
+    elif(f<123 and f>60):
+        f-=32
+    return chr(f)
+
+def swap_case(s):
+    result=""
+    a=len(s.split())
+    l=[]
+    for b in range(0,a):
+        l.extend(s.split()[b])
+        l.append(" ")
+    l.pop()
+
+    for c in l:
+        result=result+ascii(c)
+
+    return(result)    
